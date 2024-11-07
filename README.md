@@ -27,7 +27,7 @@ To run this project, you will need:
 3. Create a `.env` file in the root directory to configure environment variables (if needed). Example:
    ```
    NODE_ENV=development
-   PORT=3000
+   PORT=8000
    ```
 
 ## Usage
@@ -45,7 +45,7 @@ To run this project, you will need:
 The server will be running by default at [http://localhost:3000](http://localhost:3000).
 
 ### File Upload API
-- Endpoint: `POST /upload`
+- Endpoint: `POST /api/extract-formulas`
 - Use `multer` to handle Excel file uploads.
 - Supports `.xlsx` and `.xls` files.
 
@@ -53,7 +53,7 @@ The server will be running by default at [http://localhost:3000](http://localhos
 You can use tools like Postman or `curl` to test the file upload endpoint.
 
 ```sh
-curl -X POST -F "file=@path/to/your/file.xlsx" http://localhost:3000/upload
+curl -X POST -F "file=@path/to/your/file.xlsx" http://localhost:8000/api/extract-formulas
 ```
 
 ## Project Structure
@@ -82,10 +82,6 @@ Feel free to open issues and contribute to the project. Contributions, suggestio
 ## License
 This project is licensed under the ISC License. See `LICENSE` for more information.
 
-## Contact
-- Author: [Your Name]
-- Email: [Your Email]
-- GitHub: [Your GitHub Profile]
 
 ## To-Do
 - Add support for handling multiple sheets.

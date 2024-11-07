@@ -5,12 +5,7 @@ const PORT = 8000 || process.env.PORT;
 const fs = require("fs");
 const morgon = require("morgan");
 
-
-// calling database
-require("./config/mongodb");
-
 // middleware
-
 app.use(express.json());
 app.use(morgon("dev"));
 
